@@ -373,7 +373,7 @@ export interface AgentCard {
    */
   protocolVersion: string;
   /**
-   * Unique identifier for an agent. Must be a valid UUID, if set.
+   * A stable unique identifier (UUID) for an agent, consistent across all its versions, optional.
    * @format uuid
    */
   id?: string;

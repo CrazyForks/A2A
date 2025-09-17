@@ -435,7 +435,7 @@ message AgentCard {
   repeated AgentCardSignature signatures = 17;
   // An optional URL to an icon for the agent.
   string icon_url = 18;
-  // Unique identifier for an agent. Optional, but if set, it must be a valid UUID
+  // A stable unique identifier (UUID) for an agent, consistent across all its versions, optional.
   string id = 19 [(buf.validate.field).string.uuid = true];
 }
 // --8<-- [end:AgentCard]
