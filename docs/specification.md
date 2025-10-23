@@ -317,12 +317,7 @@ The operation MUST return all active push notification configurations for the sp
 
 - **JSON-RPC**: [`tasks/pushNotificationConfig/list`](#937-push-notification-configuration-methods)
 - **gRPC**: [`ListTaskPushNotificationConfig`](#grpc-push-notification-operations)
-- **HTTP/REST**: [`GET /v1/tasks/{id}/pushNotificationConfigs`](#1123-push-notification-configuration)
-
-#### 3.1.11. Delete Push Notification Config
-
-Removes a push notification configuration for a task.
-
+-- **HTTP/REST**: [`POST /v1/tasks/{id}/pushNotificationConfigs`](#1123-push-notification-configuration)
 **Inputs:**
 
 - `taskId`: Unique identifier of the task
@@ -1658,7 +1653,7 @@ data: {"statusUpdate": { /* TaskStatusUpdateEvent */ }}
 **Referenced Objects:** [`Task`](#411-task), [`TaskStatusUpdateEvent`](#421-taskstatusupdateevent), [`TaskArtifactUpdateEvent`](#422-taskartifactupdateevent)
 <span id="4192-taskstatusupdateevent"></span><span id="4193-taskartifactupdateevent"></span>
 Streaming responses are simple, linearly ordered sequences: first a `Task` (or single `Message`), then zero or more status or artifact update events until the task reaches a terminal or interrupted state, at which point the stream closes. Implementations SHOULD avoid re-ordering events and MAY optionally resend a final `Task` snapshot before closing.
-
+---
 ---
 
 ## Appendix A. Migration & Legacy Compatibility
